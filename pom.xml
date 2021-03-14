@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.cdtarmy</groupId>
-    <artifactId>AdvertiserTS3</artifactId>
+    <artifactId>TS3DoggoBot</artifactId>
     <version>1.0-BETA</version>
     <dependencies>
         <dependency>
