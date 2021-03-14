@@ -1,5 +1,6 @@
 package net.cdtarmy.main;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -10,10 +11,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 public class Runner {
 
@@ -37,10 +35,17 @@ public class Runner {
         JsonParser jp = new JsonParser(); //from gson
         JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
         JsonObject rootobj = root.getAsJsonObject(); //May be an array, may be an object.
-        String link = rootobj.getAsJsonArray("data").getAsString();//just grab the link
+        String link = rootobj.toString();//just grab the link
 
-        System.out.println(link);
-        System.out.println(rootobj.toString());
+        Gson gson = new Gson();
+        Data data = gson.fromJson(link, Data.class);
+
+        String urlString = "https://i.giphy.com/media/" + data.getData().getId() + "/giphy.gif";
+
+
+        TS3Connection ts3 = new TS3Connection(urlString);
+
+        return;
 
     }
 
