@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TS3DoggoBot" target="15" />
+      <module name="TS3DoggoBot" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

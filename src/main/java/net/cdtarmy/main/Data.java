@@ -2,7 +2,6 @@ package net.cdtarmy.main;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.cdtarmy.main.Data_;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -15,13 +14,11 @@ public class Data {
 
     /**
      * No args constructor for use in serialization
-     *
      */
     public Data() {
     }
 
     /**
-     *
      * @param data
      */
     public Data(Data_ data) {

@@ -125,13 +125,11 @@ public class Data_ {
 
     /**
      * No args constructor for use in serialization
-     *
      */
     public Data_() {
     }
 
     /**
-     *
      * @param embedUrl
      * @param fixedHeightSmallWidth
      * @param fixedWidthSmallStillUrl

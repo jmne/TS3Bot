@@ -45,7 +45,6 @@ public class Runner {
 
         TS3Connection ts3 = new TS3Connection(urlString);
 
-        return;
 
     }
 
