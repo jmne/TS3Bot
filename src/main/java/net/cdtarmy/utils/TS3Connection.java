@@ -31,7 +31,7 @@ public class TS3Connection {
         if (list.isEmpty()) {
             csgo = "[COLOR=#aa0000]([I]Offline[/I])";
             gmod = "[COLOR=#aa0000]([I]Offline[/I])";
-        } else if (list.get(0).getGamedir().equalsIgnoreCase("gmod")) {
+        } else if (list.get(0).getGamedir().equalsIgnoreCase("garrysmod")) {
             csgo = "[COLOR=#aa0000]([I]Offline[/I])";
         } else if (list.size() == 1) {
             gmod = "[COLOR=#aa0000]([I]Offline[/I])";

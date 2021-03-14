@@ -58,7 +58,7 @@ public class Runner {
 
     private List<Server> onlineStatus() throws IOException {
 
-        String sURL = "http://api.steampowered.com/ISteamApps/GetServersAtAddress/v0001?addr=185.216.178.7&format=json"; //just a string
+        String sURL = "http://api.steampowered.com/ISteamApps/GetServersAtAddress/v0001?addr=51.81.5.161&format=json"; //just a string
 
         // Connect to the URL using java's native library
         URL url = new URL(sURL);
