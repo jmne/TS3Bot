@@ -1,5 +1,3 @@
 net\cdtarmy\main\Initialize.class
-net\cdtarmy\main\Runner.class
-net\cdtarmy\main\Data.class
-net\cdtarmy\main\Data_.class
 net\cdtarmy\utils\TS3Connection.class
+net\cdtarmy\main\Runner.class

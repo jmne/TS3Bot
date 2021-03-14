@@ -5,13 +5,15 @@ import com.github.theholywaffle.teamspeak3.TS3Config;
 import com.github.theholywaffle.teamspeak3.TS3Query;
 import com.github.theholywaffle.teamspeak3.api.ChannelProperty;
 
+import java.util.List;
+
 public class TS3Connection {
 
     final TS3Config config;
     final TS3Query query;
     final TS3Api api;
 
-    public TS3Connection(String URL) {
+    public TS3Connection(String URL, List<Server> list) {
         config = new TS3Config();
         config.setHost("cdtarmy.net");
 
@@ -23,10 +25,22 @@ public class TS3Connection {
         api.selectVirtualServerById(1);
         api.setNickname("[CDT] Doggo-Bot");
 
-        api.editChannel(151, ChannelProperty.CHANNEL_DESCRIPTION, "[center][COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
+        String csgo = "[COLOR=#00aa00]([I]Online[/I])";
+        String gmod = "[COLOR=#00aa00]([I]Online[/I])";
+
+        if (list.isEmpty()) {
+            csgo = "[COLOR=#aa0000]([I]Offline[/I])";
+            gmod = "[COLOR=#aa0000]([I]Offline[/I])";
+        } else if (list.get(0).getGamedir().equalsIgnoreCase("gmod")) {
+            csgo = "[COLOR=#aa0000]([I]Offline[/I])";
+        } else if (list.size() == 1) {
+            gmod = "[COLOR=#aa0000]([I]Offline[/I])";
+        }
+
+        api.editChannel(151, ChannelProperty.CHANNEL_DESCRIPTION, "[center][COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
                 "\n" +
-                "[url=steam://connect/185.216.178.7:27015/jan][B][ [COLOR=#ffaa00]CSGO Server[/COLOR] ] [/B][/url] [color=red][B]|[/B][/color] [url=steam://connect/185.216.178.7:27016/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n" +
-                "[COLOR=#00aa00]([I]Online[/I])        [/COLOR][B] |[/B]  [COLOR=#00aa00]        ([I]Online[/I])[/COLOR]\n" +
+                "[url=steam://connect/185.216.178.7:27015/jan][B][ [COLOR=#ffaa00]CSGO Server[/COLOR] ] [/B][/url] [color=red][B]|[/B][/color] [url=steam://connect/185.216.178.7:27016/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n " +
+                csgo + "[/COLOR]        [B] |[/B]          " + gmod + "[/COLOR]\n" +
                 "\n" +
                 "[COLOR=#ffffff]–––––––––––––––[/COLOR]\n" +
                 "[hr]\n" +
