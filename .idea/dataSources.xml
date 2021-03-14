@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="advertiserts3@cdtarmy.net" uuid="b6e91ba8-ad63-4077-848d-210248293262">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://cdtarmy.net:3306/advertiserts3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <time-zone>Europe/Berlin</time-zone>
+    </data-source>
+  </component>
+</project>
