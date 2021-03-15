@@ -41,15 +41,15 @@ public class TS3Connection {
         api.editChannel(151, ChannelProperty.CHANNEL_DESCRIPTION, "[center][COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
                 "\n" +
                 "[url=steam://connect/185.216.178.7:27015/jan][B][ [COLOR=#ffaa00]CSGO Server[/COLOR] ] [/B][/url] [color=red][B]|[/B][/color] [url=steam://connect/185.216.178.7:27016/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n " +
-                csgo + "[/COLOR]         [B] |[/B]           " + gmod + "[/COLOR]\n" +
-                "\n" +
+                csgo + "[/COLOR]         [B] |[/B]            " + gmod + "[/COLOR]\n \n" +
+                "[color=#55aaff][B][ [COLOR=#ffaa00]Minecraft Server[/COLOR] ] [/B][/color]\n" +
+                minec + "\n" +
                 "[COLOR=#ffffff]–––––––––––––––[/COLOR]\n" +
                 "[hr]\n" +
                 "[img]" + URL + "[/img]\n" +
                 "[hr]\n" +
-                "[color=#55aaff][B][ [COLOR=#ffaa00]Minecraft Server[/COLOR] ] [/B][/color]\n" +
-                minec + "\n");
-
+                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
+                "[url=https://status.cdtarmy.net/][B][ [COLOR=#ffaa00]CLICK HERE[/COLOR] ] [/B][/url]");
 
     }
 }
