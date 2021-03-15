@@ -1,4 +1,3 @@
-
 package net.cdtarmy.utils;
 
 import com.google.gson.annotations.Expose;
