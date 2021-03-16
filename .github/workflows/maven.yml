@@ -22,5 +22,5 @@ jobs:
         java-version: 1.11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: release-please-action
-      uses: google-github-actions/release-please-action@v2.19.2
+    - name: Semantic Releaser
+      uses: brpaz/action-semantic-release@v1
