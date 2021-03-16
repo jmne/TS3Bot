@@ -25,4 +25,4 @@ jobs:
     - name: Github Release
       uses: elgohr/Github-Release-Action@v3.1
       with:
-        RELEASE. 2V!:§-beta2
+        release: v1.3-BETA
