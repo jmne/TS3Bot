@@ -28,6 +28,6 @@ jobs:
     - name: Create a Release
       uses: elgohr/Github-Release-Action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: 109f4a5ec40e94a049c8c5598d79ee90fb091889
       with:
         args: ${{ github.sha }}
