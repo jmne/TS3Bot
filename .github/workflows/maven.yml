@@ -22,5 +22,7 @@ jobs:
         java-version: 1.11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Semantic Releaser
-      uses: brpaz/action-semantic-release@v1
+    - name: Github Release
+      uses: elgohr/Github-Release-Action@v3.1
+      with:
+        RELEASE. 2V!:§-beta2
