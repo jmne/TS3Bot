@@ -22,7 +22,10 @@ jobs:
         java-version: 1.11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Github Release
-      uses: elgohr/Github-Release-Action@v3.1
+    - uses: actions/checkout@master
+    - name: Create a Release
+      uses: elgohr/Github-Release-Action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        release: v1.3-BETA
+        args: Release Beta 1.3
