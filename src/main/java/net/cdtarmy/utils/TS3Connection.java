@@ -15,7 +15,7 @@ public class TS3Connection {
     final TS3Query query;
     final TS3Api api;
 
-    public TS3Connection(String URL, List<Server> list, MC mc, String s) {
+    public TS3Connection(String URL, List<Server> list, MC mc, String joke) {
         config = new TS3Config();
         config.setHost("cdtarmy.net");
 
@@ -51,7 +51,10 @@ public class TS3Connection {
                 "[img]" + URL + "[/img]\n" +
                 "[hr]\n" +
                 "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
-                "[url=https://status.cdtarmy.net/][B][ [COLOR=#ffaa00]CLICK HERE[/COLOR] ] [/B][/url]");
+                "[url=https://status.cdtarmy.net/][B][ [COLOR=#ffaa00]CLICK HERE[/COLOR] ] [/B][/url]\n" +
+                "[hr]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Witz des Tages ––[/B][/COLOR][/size]\n" +
+                "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]");
 
     }
 }
