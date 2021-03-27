@@ -8,14 +8,18 @@ import net.cdtarmy.json.MC;
 import net.cdtarmy.json.Server;
 import net.cdtarmy.json.Steam;
 import net.cdtarmy.utils.*;
+import org.apache.commons.lang3.reflect.FieldUtils;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -31,11 +35,7 @@ public class Runner {
 
     public void run() throws IOException {
 
-        String urlString = getUrlString();
-
-
-        TS3Connection ts3 = new TS3Connection(urlString, onlineStatus(), onlineStatusMC(), dadJoke());
-
+        TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke());
 
     }
 
@@ -93,7 +93,7 @@ public class Runner {
         // Convert to a JSON object to print data
         JsonParser jp = new JsonParser(); //from gson
         JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
-        String link = root.getAsJsonObject().toString();//just grab the link
+        String link = root.getAsJsonObject().toString(); //just grab the link
 
         Gson gson = new Gson();
 
@@ -101,10 +101,17 @@ public class Runner {
 
     }
 
-     private String dadJoke() throws IOException {
+    private String dadJoke() throws IOException {
 
-         List<String> lines = Files.readAllLines(Paths.get("src/main/java/net/cdtarmy/jokes.txt"));
-         Random r = new Random();
+        // java.io.InputStream
+        InputStream inputStream = this.getClass().getResourceAsStream("/jokes.txt");
+        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+        BufferedReader reader = new BufferedReader(streamReader);
+        List<String> lines = new ArrayList<>();
+        for (String line; (line = reader.readLine()) != null;) {
+            lines.add(line);
+        }
+        Random r = new Random();
         return lines.get(r.nextInt(lines.size()));
     }
 
