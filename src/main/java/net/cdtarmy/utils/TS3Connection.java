@@ -4,6 +4,8 @@ import com.github.theholywaffle.teamspeak3.TS3Api;
 import com.github.theholywaffle.teamspeak3.TS3Config;
 import com.github.theholywaffle.teamspeak3.TS3Query;
 import com.github.theholywaffle.teamspeak3.api.ChannelProperty;
+import net.cdtarmy.json.MC;
+import net.cdtarmy.json.Server;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class TS3Connection {
     final TS3Query query;
     final TS3Api api;
 
-    public TS3Connection(String URL, List<Server> list, MC mc) {
+    public TS3Connection(String URL, List<Server> list, MC mc, String s) {
         config = new TS3Config();
         config.setHost("cdtarmy.net");
 

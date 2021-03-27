@@ -8,7 +8,6 @@ public class Initialize {
 
         Runner run = new Runner();
         run.run();
-
         System.exit(0);
 
     }

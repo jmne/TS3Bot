@@ -3,6 +3,10 @@ package net.cdtarmy.main;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import net.cdtarmy.json.Data;
+import net.cdtarmy.json.MC;
+import net.cdtarmy.json.Server;
+import net.cdtarmy.json.Steam;
 import net.cdtarmy.utils.*;
 
 import java.io.IOException;
@@ -10,7 +14,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Random;
 
 
 public class Runner {
@@ -27,7 +34,7 @@ public class Runner {
         String urlString = getUrlString();
 
 
-        TS3Connection ts3 = new TS3Connection(urlString, onlineStatus(), onlineStatusMC());
+        TS3Connection ts3 = new TS3Connection(urlString, onlineStatus(), onlineStatusMC(), dadJoke());
 
 
     }
@@ -92,6 +99,13 @@ public class Runner {
 
         return gson.fromJson(link, MC.class);
 
+    }
+
+     private String dadJoke() throws IOException {
+
+         List<String> lines = Files.readAllLines(Paths.get("src/main/java/net/cdtarmy/jokes.txt"));
+         Random r = new Random();
+        return lines.get(r.nextInt(lines.size()));
     }
 
 }
