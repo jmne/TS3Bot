@@ -8,6 +8,14 @@
     <artifactId>TS3DoggoBot</artifactId>
     <version>1.3-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>TS3DoggoBot</id>
+            <name>TS3DoggoBot</name>
+            <url>https://github.com/jancodet/TS3DoggoBot/releases</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
