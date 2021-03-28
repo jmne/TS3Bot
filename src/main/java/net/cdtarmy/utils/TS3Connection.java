@@ -15,7 +15,7 @@ public class TS3Connection {
     final TS3Query query;
     final TS3Api api;
 
-    public TS3Connection(String URL, List<Server> list, MC mc, String joke) {
+    public TS3Connection(String URL, List<Server> list, MC mc, String joke, String lyrics, String artists) {
         config = new TS3Config();
         config.setHost("cdtarmy.net");
 
@@ -50,11 +50,15 @@ public class TS3Connection {
                 "[hr]\n" +
                 "[img]" + URL + "[/img]\n" +
                 "[hr]\n" +
-                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
-                "[url=https://status.cdtarmy.net/][B][ [COLOR=#ffaa00]CLICK HERE[/COLOR] ] [/B][/url]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Lyrics des Tages ––[/B][/COLOR][/size]\n" +
+                "[COLOR=#00ff7f][I]" + lyrics + "[/I][/COLOR]\n" +
+                "[COLOR=#55aaff][size=7][ " + artists.toString() + "][/size][/COLOR]\n" +
                 "[hr]\n" +
                 "[size=13][COLOR=#c9c9c9][B]–– Witz des Tages ––[/B][/COLOR][/size]\n" +
-                "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]");
+                "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]\n" +
+                "[hr]\n" +
+                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
+                "[url=https://status.cdtarmy.net/][B][ [COLOR=#ffaa00]CLICK HERE[/COLOR] ] [/B][/url]\n");
 
     }
 }

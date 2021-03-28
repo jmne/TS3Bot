@@ -38,12 +38,13 @@ public class Runner {
 
     public void run() throws IOException, MusixMatchException {
 
-        //TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke());
-
         SpotifyWrapper w = new SpotifyWrapper();
         String[] rs = w.getRandomSong();
         ResolveLyrics r = new ResolveLyrics(rs[0], rs[1]);
-        System.out.println(r.getRandomLine());
+
+
+        TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke(), r.getRandomLine(), w.getArtists());
+
     }
 
     private String getUrlString() throws IOException {
