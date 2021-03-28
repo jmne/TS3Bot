@@ -7,8 +7,11 @@ import net.cdtarmy.json.Data;
 import net.cdtarmy.json.MC;
 import net.cdtarmy.json.Server;
 import net.cdtarmy.json.Steam;
+import net.cdtarmy.spotify.ResolveLyrics;
+import net.cdtarmy.spotify.SpotifyWrapper;
 import net.cdtarmy.utils.*;
 import org.apache.commons.lang3.reflect.FieldUtils;
+import org.jmusixmatch.MusixMatchException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,10 +36,14 @@ public class Runner {
 
     }
 
-    public void run() throws IOException {
+    public void run() throws IOException, MusixMatchException {
 
-        TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke());
+        //TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke());
 
+        SpotifyWrapper w = new SpotifyWrapper();
+        String[] rs = w.getRandomSong();
+        ResolveLyrics r = new ResolveLyrics(rs[0], rs[1]);
+        System.out.println(r.getRandomLine());
     }
 
     private String getUrlString() throws IOException {
