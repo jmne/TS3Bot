@@ -9,7 +9,9 @@ public class Initialize{
     public static void main(String[] args) throws IOException, MusixMatchException {
 
         Runner run = new Runner();
-        run.run();
+        while(!run.run()){
+            System.out.println("Starte Programm");
+        }
         System.exit(0);
 
     }

@@ -10,18 +10,12 @@ import net.cdtarmy.json.Steam;
 import net.cdtarmy.spotify.ResolveLyrics;
 import net.cdtarmy.spotify.SpotifyWrapper;
 import net.cdtarmy.utils.*;
-import org.apache.commons.lang3.reflect.FieldUtils;
 import org.jmusixmatch.MusixMatchException;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -36,14 +30,24 @@ public class Runner {
 
     }
 
-    public void run() throws IOException, MusixMatchException {
+    public boolean run() {
 
-        SpotifyWrapper w = new SpotifyWrapper();
-        String[] rs = w.getRandomSong();
-        ResolveLyrics r = new ResolveLyrics(rs[0], rs[1]);
+        try {
+            SpotifyWrapper w = new SpotifyWrapper();
+            String[] rs = w.getRandomSong();
+            ResolveLyrics r = new ResolveLyrics(rs[0], rs[1]);
 
+            String userDirectory = System.getProperty("user.dir");
+            System.out.println(userDirectory);
 
-        TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke(), r.getRandomLine(), w.getArtists());
+            TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), dadJoke(), r.getRandomLine(), w.getArtists(), ReadTextFromURL.Github());
+        }catch (MusixMatchException | IOException e){
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+
 
     }
 
@@ -112,7 +116,7 @@ public class Runner {
     private String dadJoke() throws IOException {
 
         // java.io.InputStream
-        InputStream inputStream = this.getClass().getResourceAsStream("/jokes.txt");
+        InputStream inputStream = new FileInputStream(new File(System.getProperty("user.dir") + "/TS3DoggoBot/jokes.txt"));
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
         List<String> lines = new ArrayList<>();
