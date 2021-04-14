@@ -54,7 +54,7 @@ public class TS3Connection {
                 "[COLOR=#00ff7f][I]" + lyrics + "[/I][/COLOR]\n" +
                 "[COLOR=#55aaff][size=7][ " + artists.toString() + "][/size][/COLOR]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Witz des Olli's ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Witz vom Olli ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]\n" +
                 "[hr]\n" +
                 "[size=13][COLOR=#c9c9c9][B]–– Paulaner Geschichte ––[/B][/COLOR][/size]\n" +
