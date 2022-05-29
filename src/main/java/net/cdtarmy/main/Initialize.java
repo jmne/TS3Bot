@@ -10,7 +10,7 @@ public class Initialize{
 
         Runner run = new Runner();
         while(!run.run()){
-            System.out.println("Starte Programm");
+            System.out.println("Starte Programm.");
         }
         System.exit(0);
 
