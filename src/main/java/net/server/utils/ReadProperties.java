@@ -15,7 +15,7 @@ public class ReadProperties {
             if (app.available() > 0) {
                 prop.load(app);
             } else {
-                FileInputStream appDefault = new FileInputStream("app.properties");
+                FileInputStream appDefault = new FileInputStream("app.default.properties");
                 if (appDefault.available() > 0) {
                     prop.load(appDefault);
                 } else {
