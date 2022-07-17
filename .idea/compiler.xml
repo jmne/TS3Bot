@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="TS3DoggoBot" />
+        <module name="TS3Bot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TS3DoggoBot" target="11" />
+      <module name="TS3Bot" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,3 +1,3 @@
-# TS3DoggoBot
+# TS3Bot
 
-Dog Bot in Java
+TS3 Bot in Java to add little features:)
