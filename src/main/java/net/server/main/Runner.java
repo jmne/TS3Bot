@@ -108,7 +108,7 @@ public class Runner {
     private String getJoke() throws IOException {
 
         // java.io.InputStream
-        InputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/jokes.txt");
+        InputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/jokes.default.txt");
         return getString(inputStream);
     }
 
