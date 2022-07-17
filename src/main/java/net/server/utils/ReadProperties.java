@@ -11,7 +11,17 @@ public class ReadProperties {
     public ReadProperties() {
         try {
             prop = new Properties();
-            prop.load(new FileInputStream("app.default.properties"));
+            FileInputStream app = new FileInputStream("app.properties");
+            if (app.available() > 0) {
+                prop.load(app);
+            } else {
+                FileInputStream appDefault = new FileInputStream("app.properties");
+                if (appDefault.available() > 0) {
+                    prop.load(appDefault);
+                } else {
+                    System.out.println("No properties file found!");
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
