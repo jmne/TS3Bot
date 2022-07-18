@@ -12,17 +12,16 @@ public class ReadProperties {
     public ReadProperties() {
         try {
             prop = new Properties();
-            FileInputStream app = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/app.properties");
-            if (app.available() > 0) {
-                prop.load(app);
+            File appFile = new File(System.getProperty("user.dir") + "/TS3Bot/app.properties");
+            File appDefFile = new File(System.getProperty("user.dir") + "/TS3Bot/app.default.properties");
+            if (appFile.exists()) {
+                prop.load(new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/app.properties"));
+            } else if (appDefFile.exists()) {
+                prop.load(new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/app.default.properties"));
             } else {
-                FileInputStream appDefault = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/app.default.properties");
-                if (appDefault.available() > 0) {
-                    prop.load(appDefault);
-                } else {
-                    System.out.println("No properties file found!");
-                }
+                System.out.println("No properties file found!");
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
