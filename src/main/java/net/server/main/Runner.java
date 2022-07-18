@@ -65,7 +65,7 @@ public class Runner {
         request.connect();
 
         JsonObject jsonObject =
-                JsonParser.parseString(String.valueOf(new InputStreamReader((InputStream) request.getContent()))).getAsJsonObject();
+                JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
 
         return jsonObject.toString(); //grab the link
 
