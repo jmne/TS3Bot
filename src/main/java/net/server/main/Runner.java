@@ -1,7 +1,6 @@
 package net.server.main;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import net.server.json.Data;
@@ -15,7 +14,10 @@ import net.server.utils.ReadTextFromURL;
 import net.server.utils.TS3Connection;
 import org.jmusixmatch.MusixMatchException;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -62,7 +64,8 @@ public class Runner {
         URLConnection request = url.openConnection();
         request.connect();
 
-        JsonObject jsonObject = JsonParser.parseString(String.valueOf(new InputStreamReader((InputStream) request.getContent()))).getAsJsonObject();
+        JsonObject jsonObject =
+                JsonParser.parseString(String.valueOf(new InputStreamReader((InputStream) request.getContent()))).getAsJsonObject();
 
         return jsonObject.toString(); //grab the link
 
