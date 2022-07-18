@@ -32,18 +32,6 @@ public class SpotifyWrapper {
         tracks = getRandomSongOfPlaylist().getTracks().getItems();
     }
 
-    public static String toCSV(String[] array) {
-        String result = "";
-        if (array.length > 0) {
-            StringBuilder sb = new StringBuilder();
-            for (String s : array) {
-                sb.append(s).append(",");
-            }
-            result = sb.deleteCharAt(sb.length() - 1).toString();
-        }
-        return result;
-    }
-
     public String[] getRandomSong() {
 
         Random r = new Random();

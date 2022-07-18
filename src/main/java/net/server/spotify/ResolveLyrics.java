@@ -13,7 +13,7 @@ import java.util.Random;
 public class ResolveLyrics {
 
     private static final ReadProperties prop = new ReadProperties();
-    MusixMatch match;
+    final MusixMatch match;
     String[] lines;
 
     public ResolveLyrics(String songName, String songArtist) throws MusixMatchException {

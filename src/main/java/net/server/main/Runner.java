@@ -14,13 +14,11 @@ import net.server.utils.ReadTextFromURL;
 import net.server.utils.TS3Connection;
 import org.jmusixmatch.MusixMatchException;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
+import java.util.Properties;
 
 import static net.server.utils.ReadTextFromURL.getString;
 
@@ -46,7 +44,7 @@ public class Runner {
             String userDirectory = System.getProperty("user.dir");
             System.out.println(userDirectory);
 
-            TS3Connection ts3 = new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), getJoke(),
+            new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), getJoke(),
                     r.getRandomLine(), w.getArtists(), ReadTextFromURL.Github());
         } catch (MusixMatchException | IOException e) {
             e.printStackTrace();
@@ -110,8 +108,23 @@ public class Runner {
 
     private String getJoke() throws IOException {
 
-        // java.io.InputStream
-        InputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/jokes.default.txt");
+        InputStream inputStream = null;
+
+        try {
+            File jokeFile = new File(System.getProperty("user.dir") + "/TS3Bot/jokes.txt");
+            File jokeDefFile = new File(System.getProperty("user.dir") + "/TS3Bot/jokes.default.txt");
+            if (jokeFile.exists()) {
+                inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/jokes.txt");
+            } else if (jokeDefFile.exists()) {
+                inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/jokes.default.txt");
+            } else {
+                System.out.println("No Jokes file found!");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return getString(inputStream);
     }
 

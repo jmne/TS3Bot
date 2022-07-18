@@ -33,7 +33,7 @@ public class TS3Connection {
 
         String csgo = "[COLOR=#00aa00]([I]Online[/I])";
         String gmod = "[COLOR=#00aa00]([I]Online[/I])";
-        String minec = mc.getOnline() ? "[COLOR=#00aa00]([I]Online[/I])" : "[COLOR=#aa0000]([I]Offline[/I])";
+        String mcstr = mc.getOnline() ? "[COLOR=#00aa00]([I]Online[/I])" : "[COLOR=#aa0000]([I]Offline[/I])";
 
         if (list.isEmpty()) {
             csgo = "[COLOR=#aa0000]([I]Offline[/I])";
@@ -52,7 +52,7 @@ public class TS3Connection {
                 "[color=red][B]|[/B][/color] [url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty("app.GMODServerPort") + "/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n " +
                 csgo + "[/COLOR]         [B] |[/B]            " + gmod + "[/COLOR]\n \n" +
                 "[color=#55aaff][B][ [COLOR=#ffaa00]Minecraft Server[/COLOR] ] [/B][/color]\n" +
-                minec + "\n" +
+                mcstr + "\n" +
                 "[COLOR=#ffffff]–––––––––––––––[/COLOR]\n" +
                 "[hr]\n" +
                 "[img]" + URL + "[/img]\n" +

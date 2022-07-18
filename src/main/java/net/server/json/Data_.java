@@ -129,57 +129,7 @@ public class Data_ {
     public Data_() {
     }
 
-    /**
-     * @param embedUrl
-     * @param fixedHeightSmallWidth
-     * @param fixedWidthSmallStillUrl
-     * @param sourcePostUrl
-     * @param fixedWidthDownsampledHeight
-     * @param bitlyUrl
-     * @param rating
-     * @param caption
-     * @param source
-     * @param type
-     * @param title
-     * @param fixedHeightDownsampledUrl
-     * @param fixedWidthSmallHeight
-     * @param sourceTld
-     * @param imageUrl
-     * @param fixedHeightSmallUrl
-     * @param id
-     * @param bitlyGifUrl
-     * @param fixedWidthSmallUrl
-     * @param fixedWidthSmallWidth
-     * @param slug
-     * @param importDatetime
-     * @param imageWidth
-     * @param fixedWidthDownsampledUrl
-     * @param fixedHeightSmallStillUrl
-     * @param fixedHeightSmallHeight
-     * @param trendingDatetime
-     * @param fixedHeightDownsampledHeight
-     * @param url
-     * @param imageMp4Url
-     * @param imageHeight
-     * @param contentUrl
-     * @param isSticker
-     * @param imageOriginalUrl
-     * @param imageFrames
-     * @param fixedWidthDownsampledWidth
-     * @param fixedHeightDownsampledWidth
-     * @param username
-     */
-    public Data_(String type, String id, String url, String slug, String bitlyGifUrl, String bitlyUrl,
-                 String embedUrl, String username, String source, String title, String rating, String contentUrl,
-                 String sourceTld, String sourcePostUrl, Integer isSticker, String importDatetime,
-                 String trendingDatetime, String imageOriginalUrl, String imageUrl, String imageMp4Url,
-                 String imageFrames, String imageWidth, String imageHeight, String fixedHeightDownsampledUrl,
-                 String fixedHeightDownsampledWidth, String fixedHeightDownsampledHeight,
-                 String fixedWidthDownsampledUrl, String fixedWidthDownsampledWidth,
-                 String fixedWidthDownsampledHeight, String fixedHeightSmallUrl, String fixedHeightSmallStillUrl,
-                 String fixedHeightSmallWidth, String fixedHeightSmallHeight, String fixedWidthSmallUrl,
-                 String fixedWidthSmallStillUrl, String fixedWidthSmallWidth, String fixedWidthSmallHeight,
-                 String caption) {
+    public Data_(String type, String id, String url, String slug, String bitlyGifUrl, String bitlyUrl, String embedUrl, String username, String source, String title, String rating, String contentUrl, String sourceTld, String sourcePostUrl, Integer isSticker, String importDatetime, String trendingDatetime, String imageOriginalUrl, String imageUrl, String imageMp4Url, String imageFrames, String imageWidth, String imageHeight, String fixedHeightDownsampledUrl, String fixedHeightDownsampledWidth, String fixedHeightDownsampledHeight, String fixedWidthDownsampledUrl, String fixedWidthDownsampledWidth, String fixedWidthDownsampledHeight, String fixedHeightSmallUrl, String fixedHeightSmallStillUrl, String fixedHeightSmallWidth, String fixedHeightSmallHeight, String fixedWidthSmallUrl, String fixedWidthSmallStillUrl, String fixedWidthSmallWidth, String fixedWidthSmallHeight, String caption) {
         super();
         this.type = type;
         this.id = id;
@@ -717,8 +667,7 @@ public class Data_ {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("type", type).append("id", id).append("url", url).append("slug",
-                slug).append("bitlyGifUrl", bitlyGifUrl).append("bitlyUrl", bitlyUrl).append("embedUrl", embedUrl).append("username", username).append("source", source).append("title", title).append("rating", rating).append("contentUrl", contentUrl).append("sourceTld", sourceTld).append("sourcePostUrl", sourcePostUrl).append("isSticker", isSticker).append("importDatetime", importDatetime).append("trendingDatetime", trendingDatetime).append("imageOriginalUrl", imageOriginalUrl).append("imageUrl", imageUrl).append("imageMp4Url", imageMp4Url).append("imageFrames", imageFrames).append("imageWidth", imageWidth).append("imageHeight", imageHeight).append("fixedHeightDownsampledUrl", fixedHeightDownsampledUrl).append("fixedHeightDownsampledWidth", fixedHeightDownsampledWidth).append("fixedHeightDownsampledHeight", fixedHeightDownsampledHeight).append("fixedWidthDownsampledUrl", fixedWidthDownsampledUrl).append("fixedWidthDownsampledWidth", fixedWidthDownsampledWidth).append("fixedWidthDownsampledHeight", fixedWidthDownsampledHeight).append("fixedHeightSmallUrl", fixedHeightSmallUrl).append("fixedHeightSmallStillUrl", fixedHeightSmallStillUrl).append("fixedHeightSmallWidth", fixedHeightSmallWidth).append("fixedHeightSmallHeight", fixedHeightSmallHeight).append("fixedWidthSmallUrl", fixedWidthSmallUrl).append("fixedWidthSmallStillUrl", fixedWidthSmallStillUrl).append("fixedWidthSmallWidth", fixedWidthSmallWidth).append("fixedWidthSmallHeight", fixedWidthSmallHeight).append("caption", caption).toString();
+        return new ToStringBuilder(this).append("type", type).append("id", id).append("url", url).append("slug", slug).append("bitlyGifUrl", bitlyGifUrl).append("bitlyUrl", bitlyUrl).append("embedUrl", embedUrl).append("username", username).append("source", source).append("title", title).append("rating", rating).append("contentUrl", contentUrl).append("sourceTld", sourceTld).append("sourcePostUrl", sourcePostUrl).append("isSticker", isSticker).append("importDatetime", importDatetime).append("trendingDatetime", trendingDatetime).append("imageOriginalUrl", imageOriginalUrl).append("imageUrl", imageUrl).append("imageMp4Url", imageMp4Url).append("imageFrames", imageFrames).append("imageWidth", imageWidth).append("imageHeight", imageHeight).append("fixedHeightDownsampledUrl", fixedHeightDownsampledUrl).append("fixedHeightDownsampledWidth", fixedHeightDownsampledWidth).append("fixedHeightDownsampledHeight", fixedHeightDownsampledHeight).append("fixedWidthDownsampledUrl", fixedWidthDownsampledUrl).append("fixedWidthDownsampledWidth", fixedWidthDownsampledWidth).append("fixedWidthDownsampledHeight", fixedWidthDownsampledHeight).append("fixedHeightSmallUrl", fixedHeightSmallUrl).append("fixedHeightSmallStillUrl", fixedHeightSmallStillUrl).append("fixedHeightSmallWidth", fixedHeightSmallWidth).append("fixedHeightSmallHeight", fixedHeightSmallHeight).append("fixedWidthSmallUrl", fixedWidthSmallUrl).append("fixedWidthSmallStillUrl", fixedWidthSmallStillUrl).append("fixedWidthSmallWidth", fixedWidthSmallWidth).append("fixedWidthSmallHeight", fixedWidthSmallHeight).append("caption", caption).toString();
     }
 
     @Override
@@ -735,8 +684,7 @@ public class Data_ {
             return false;
         }
         Data_ rhs = ((Data_) other);
-        return new EqualsBuilder().append(embedUrl, rhs.embedUrl).append(fixedHeightSmallWidth,
-                rhs.fixedHeightSmallWidth).append(fixedWidthSmallStillUrl, rhs.fixedWidthSmallStillUrl).append(sourcePostUrl, rhs.sourcePostUrl).append(fixedWidthDownsampledHeight, rhs.fixedWidthDownsampledHeight).append(bitlyUrl, rhs.bitlyUrl).append(rating, rhs.rating).append(caption, rhs.caption).append(source, rhs.source).append(type, rhs.type).append(title, rhs.title).append(fixedHeightDownsampledUrl, rhs.fixedHeightDownsampledUrl).append(fixedWidthSmallHeight, rhs.fixedWidthSmallHeight).append(sourceTld, rhs.sourceTld).append(imageUrl, rhs.imageUrl).append(fixedHeightSmallUrl, rhs.fixedHeightSmallUrl).append(id, rhs.id).append(bitlyGifUrl, rhs.bitlyGifUrl).append(fixedWidthSmallUrl, rhs.fixedWidthSmallUrl).append(fixedWidthSmallWidth, rhs.fixedWidthSmallWidth).append(slug, rhs.slug).append(importDatetime, rhs.importDatetime).append(imageWidth, rhs.imageWidth).append(fixedWidthDownsampledUrl, rhs.fixedWidthDownsampledUrl).append(fixedHeightSmallStillUrl, rhs.fixedHeightSmallStillUrl).append(fixedHeightSmallHeight, rhs.fixedHeightSmallHeight).append(trendingDatetime, rhs.trendingDatetime).append(fixedHeightDownsampledHeight, rhs.fixedHeightDownsampledHeight).append(url, rhs.url).append(imageMp4Url, rhs.imageMp4Url).append(imageHeight, rhs.imageHeight).append(contentUrl, rhs.contentUrl).append(isSticker, rhs.isSticker).append(imageOriginalUrl, rhs.imageOriginalUrl).append(imageFrames, rhs.imageFrames).append(fixedWidthDownsampledWidth, rhs.fixedWidthDownsampledWidth).append(fixedHeightDownsampledWidth, rhs.fixedHeightDownsampledWidth).append(username, rhs.username).isEquals();
+        return new EqualsBuilder().append(embedUrl, rhs.embedUrl).append(fixedHeightSmallWidth, rhs.fixedHeightSmallWidth).append(fixedWidthSmallStillUrl, rhs.fixedWidthSmallStillUrl).append(sourcePostUrl, rhs.sourcePostUrl).append(fixedWidthDownsampledHeight, rhs.fixedWidthDownsampledHeight).append(bitlyUrl, rhs.bitlyUrl).append(rating, rhs.rating).append(caption, rhs.caption).append(source, rhs.source).append(type, rhs.type).append(title, rhs.title).append(fixedHeightDownsampledUrl, rhs.fixedHeightDownsampledUrl).append(fixedWidthSmallHeight, rhs.fixedWidthSmallHeight).append(sourceTld, rhs.sourceTld).append(imageUrl, rhs.imageUrl).append(fixedHeightSmallUrl, rhs.fixedHeightSmallUrl).append(id, rhs.id).append(bitlyGifUrl, rhs.bitlyGifUrl).append(fixedWidthSmallUrl, rhs.fixedWidthSmallUrl).append(fixedWidthSmallWidth, rhs.fixedWidthSmallWidth).append(slug, rhs.slug).append(importDatetime, rhs.importDatetime).append(imageWidth, rhs.imageWidth).append(fixedWidthDownsampledUrl, rhs.fixedWidthDownsampledUrl).append(fixedHeightSmallStillUrl, rhs.fixedHeightSmallStillUrl).append(fixedHeightSmallHeight, rhs.fixedHeightSmallHeight).append(trendingDatetime, rhs.trendingDatetime).append(fixedHeightDownsampledHeight, rhs.fixedHeightDownsampledHeight).append(url, rhs.url).append(imageMp4Url, rhs.imageMp4Url).append(imageHeight, rhs.imageHeight).append(contentUrl, rhs.contentUrl).append(isSticker, rhs.isSticker).append(imageOriginalUrl, rhs.imageOriginalUrl).append(imageFrames, rhs.imageFrames).append(fixedWidthDownsampledWidth, rhs.fixedWidthDownsampledWidth).append(fixedHeightDownsampledWidth, rhs.fixedHeightDownsampledWidth).append(username, rhs.username).isEquals();
     }
 
 }
