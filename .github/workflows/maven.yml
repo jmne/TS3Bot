@@ -27,10 +27,6 @@ jobs:
       - name: Build and test project with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Extract Project version
-        id: project
-        run: echo ::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-
 
   publish-job:
     runs-on: ubuntu-latest
@@ -43,7 +39,12 @@ jobs:
       - run: mvn -B package --file pom.xml -DskipTests
       - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
       - run: mkdir staging/TS3Bot && cp target/TS3Bot/* staging/TS3Bot
+
+      - name: Extract Project version
+          id: project
+          run: echo ::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+
       - uses: actions/upload-artifact@v1
         with:
-          name: Release-${{steps.project.outputs.version}}
+          name: Release-${{ steps.project.outputs.version }}
           path: staging
