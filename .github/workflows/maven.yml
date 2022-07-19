@@ -48,3 +48,11 @@ jobs:
         with:
           name: Release-${{ steps.project.outputs.version }}
           path: staging
+
+      - name: Release
+        uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
+        with:
+          files: staging/*
+          name: Release-${{ steps.project.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
