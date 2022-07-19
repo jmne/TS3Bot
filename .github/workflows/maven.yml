@@ -55,8 +55,7 @@ jobs:
           generate_release_notes: true
           files: |
             staging/*
-            staging/TS3Bot/app.default.properties
-            staging/TS3Bot/jokes.default.txt
+            staging/TS3Bot/*
           tag_name: latest
           name: Release-${{ steps.project.outputs.version }}
         env:
