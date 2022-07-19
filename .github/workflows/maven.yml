@@ -53,6 +53,7 @@ jobs:
         uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
         with:
           files: staging/*
+          tag_name: v${{ steps.project.outputs.version }}
           name: Release-${{ steps.project.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
