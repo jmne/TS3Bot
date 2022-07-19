@@ -48,8 +48,8 @@ public class TS3Connection {
                 "]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
                 "\n" +
                 "[url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty(
-                "app.CSServerPort") + "/jan][B][ [COLOR=#ffaa00]CSGO Server[/COLOR] ] [/B][/url] " +
-                "[color=red][B]|[/B][/color] [url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty("app.GMODServerPort") + "/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n " +
+                "app.CSServerPort") + "/jan][B][ [COLOR=#ffaa00]CSGO-Server[/COLOR] ] [/B][/url] " +
+                "[color=red][B]|[/B][/color] [url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty("app.GMODServerPort") + "/jan][B] [ [COLOR=#ffaa00]GMOD-Server[/COLOR] ][/B][/url]\n " +
                 csgo + "[/COLOR]         [B] |[/B]            " + gmod + "[/COLOR]\n \n" +
                 "[color=#55aaff][B][ [COLOR=#ffaa00]Minecraft-Server[/COLOR] ] [/B][/color]\n" +
                 mcstr + "\n" +
