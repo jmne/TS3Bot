@@ -45,7 +45,7 @@ public class TS3Connection {
         }
 
         api.editChannel(151, ChannelProperty.CHANNEL_DESCRIPTION, "[center][COLOR=#00c100][size=13][B][COLOR=#ffffff" +
-                "]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
+                "]–––––[/COLOR]  JOIN \uD83D\uDD17  [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
                 "\n" +
                 "[url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty(
                 "app.CSServerPort") + "/jan][B][ [COLOR=#ffaa00]CSGO-Server[/COLOR] ] [/B][/url] " +
