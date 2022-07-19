@@ -57,17 +57,17 @@ public class TS3Connection {
                 "[hr]\n" +
                 "[img]" + URL + "[/img]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Line des Tages ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Line des Tages\uD83D\uDC4C ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#00ff7f][I]" + lyrics + "[/I][/COLOR]\n" +
                 "[COLOR=#55aaff][size=7][ " + artists + "][/size][/COLOR]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Witz vom Olli ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Witz vom Olli\uD83E\uDD23 ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Paulaner Geschichte ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Paulaner-Geschichte\uD83D\uDCD6 ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#7a00c0][I]" + paulaner.replace("~", "\n~") + "[/I][/COLOR]\n" +
                 "[hr]\n" +
-                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS " +
+                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER-STATUS " +
                 "[COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
                 "[url=https://status." + prop.getProperty("app.ServerDomain") + "/][B][ [COLOR=#ffaa00]CLICK " +
                 "HERE[/COLOR] ] [/B][/url]\n");
