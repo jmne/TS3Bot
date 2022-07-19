@@ -18,7 +18,6 @@ import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
-import java.util.Properties;
 
 import static net.server.utils.ReadTextFromURL.getString;
 
