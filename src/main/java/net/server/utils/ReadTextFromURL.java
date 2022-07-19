@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class ReadTextFromURL {
 
-    public static String Github() throws IOException {
+    public static String getPaul() throws IOException {
 
         InputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "/TS3Bot/paulaner.txt");
         return getString(inputStream);

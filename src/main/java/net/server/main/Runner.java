@@ -44,7 +44,7 @@ public class Runner {
             System.out.println(userDirectory);
 
             new TS3Connection(getUrlString(), onlineStatus(), onlineStatusMC(), getJoke(),
-                    r.getRandomLine(), w.getArtists(), ReadTextFromURL.Github());
+                    r.getRandomLine(), w.getArtists(), ReadTextFromURL.getPaul());
         } catch (MusixMatchException | IOException e) {
             e.printStackTrace();
             return false;
