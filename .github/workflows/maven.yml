@@ -41,8 +41,8 @@ jobs:
       - run: mkdir staging/TS3Bot && cp target/TS3Bot/* staging/TS3Bot
 
       - name: Extract Project version
-          id: project
-          run: echo ::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+        id: project
+        run: echo ::set-output name=version::$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
 
       - uses: actions/upload-artifact@v1
         with:
