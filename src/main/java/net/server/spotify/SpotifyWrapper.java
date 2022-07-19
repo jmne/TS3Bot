@@ -53,6 +53,7 @@ public class SpotifyWrapper {
             stringBuilder.append(art.getName()).append(" x ");
         }
         artists = stringBuilder.deleteCharAt(stringBuilder.length() - 2).toString();
+        artists = artists.substring(0, artists.length() - 1);
     }
 
     public Playlist getRandomSongOfPlaylist() {
