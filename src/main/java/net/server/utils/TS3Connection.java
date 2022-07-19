@@ -45,11 +45,11 @@ public class TS3Connection {
         }
 
         api.editChannel(151, ChannelProperty.CHANNEL_DESCRIPTION, "[center][COLOR=#00c100][size=13][B][COLOR=#ffffff" +
-                "]–––––[/COLOR]  JOIN [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
+                "]–––––[/COLOR]  JOIN \uD83D\uDD17  [COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n " +
                 "\n" +
                 "[url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty(
-                "app.CSServerPort") + "/jan][B][ [COLOR=#ffaa00]CSGO Server[/COLOR] ] [/B][/url] " +
-                "[color=red][B]|[/B][/color] [url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty("app.GMODServerPort") + "/jan][B] [ [COLOR=#ffaa00]GMOD Server[/COLOR] ][/B][/url]\n " +
+                "app.CSServerPort") + "/jan][B][ [COLOR=#ffaa00]CSGO-Server[/COLOR] ] [/B][/url] " +
+                "[color=red][B]|[/B][/color] [url=steam://connect/" + prop.getProperty("app.ServerAddress") + ":" + prop.getProperty("app.GMODServerPort") + "/jan][B] [ [COLOR=#ffaa00]GMOD-Server[/COLOR] ][/B][/url]\n " +
                 csgo + "[/COLOR]         [B] |[/B]            " + gmod + "[/COLOR]\n \n" +
                 "[color=#55aaff][B][ [COLOR=#ffaa00]Minecraft-Server[/COLOR] ] [/B][/color]\n" +
                 mcstr + "\n" +
@@ -57,17 +57,17 @@ public class TS3Connection {
                 "[hr]\n" +
                 "[img]" + URL + "[/img]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Line des Tages ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Line des Tages\uD83D\uDC4C ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#00ff7f][I]" + lyrics + "[/I][/COLOR]\n" +
                 "[COLOR=#55aaff][size=7][ " + artists + "][/size][/COLOR]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Witz vom Olli ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Witz vom Olli\uD83E\uDD23 ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#55aaff][I]" + joke + "[/I][/COLOR]\n" +
                 "[hr]\n" +
-                "[size=13][COLOR=#c9c9c9][B]–– Paulaner Geschichte ––[/B][/COLOR][/size]\n" +
+                "[size=13][COLOR=#c9c9c9][B]–– Paulaner-Geschichte\uD83D\uDCD6 ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#7a00c0][I]" + paulaner.replace("~", "\n~") + "[/I][/COLOR]\n" +
                 "[hr]\n" +
-                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER STATUS " +
+                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER-STATUS " +
                 "[COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
                 "[url=https://status." + prop.getProperty("app.ServerDomain") + "/][B][ [COLOR=#ffaa00]CLICK " +
                 "HERE[/COLOR] ] [/B][/url]\n");
