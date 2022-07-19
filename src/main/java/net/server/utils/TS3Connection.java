@@ -67,7 +67,7 @@ public class TS3Connection {
                 "[size=13][COLOR=#c9c9c9][B]–– Paulaner-Geschichte\uD83D\uDCD6 ––[/B][/COLOR][/size]\n" +
                 "[COLOR=#7a00c0][I]" + paulaner.replace("~", "\n~") + "[/I][/COLOR]\n" +
                 "[hr]\n" +
-                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER-STATUS " +
+                "[COLOR=#00c100][size=13][B][COLOR=#ffffff]–––––[/COLOR] SERVER-STATUS \uD83C\uDF10 " +
                 "[COLOR=#ffffff]–––––[/COLOR][/B][/size][/COLOR]\n" +
                 "[url=https://status." + prop.getProperty("app.ServerDomain") + "/][B][ [COLOR=#ffaa00]CLICK " +
                 "HERE[/COLOR] ] [/B][/url]\n");
